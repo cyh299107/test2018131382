@@ -21,7 +21,7 @@ import org.springframework.test.context.junit4.SpringRunner;
         System.out.println("该用户ID为：");
         System.out.println(userBean.getld());
     }
-    
+
 }
 
 
