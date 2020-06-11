@@ -1,0 +1,30 @@
+
+server:
+  port: 8080
+
+          spring:
+            datasource:
+              name: studenms
+              url: jdbc:mysql://localhost:3306/studenms
+              username: root    #数据库
+              password: 123456  #密码
+              driver-class-name: com.mysql.jdbc.Driver #数据库链接驱动
+
+              hikari:
+                maximum-pool-size: 10
+                minimum-idle: 8
+                connection-timeout: 2000
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml #配置映射文件
+  type-aliases-package: com.example.test2018131382.bean  #配置实体类
+
+  logging:
+    level.com.example.test: debug
+
+  #mybatis分页配置
+  pagehelper:
+    helper-dialect: mysql
+    reasonable: true
+    support-methods-arguments: true
+    params: count=countsql
